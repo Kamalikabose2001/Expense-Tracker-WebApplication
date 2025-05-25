@@ -1,30 +1,130 @@
-# Expense-Tracker-WebApplication
-A simple web-based expense tracker built with Java Spring Boot. This application allows users to add, edit, and delete expenses and view expense summaries. It features with Thymeleaf (or React, if applicable). Ideal for personal finance management.
+A robust and user-friendly Expense Tracker web application built with Spring Boot. This application allows users to manage their personal finances by tracking expenses and incomes, categorizing transactions, and viewing insightful reports.
+
+📋 Table of Contents
+Features
 
 Tech Stack
-----------
-FrameWork -> Springboot
-Frontend  -> BootStrap
-Server    -> Thymeleaf
-DataBase  -> H2(Database is not connected to this project)
 
-Project Contraints
-------------------
-1>In Description there is word limit upto 20 and it can't be null a "Description is required" message will show.
-2>The Amount must be numbers. we can't input any words or characters there.It can't be null.
+Getting Started
 
-Spring Boot includes an embedded Tomcat, so you don’t have to install it separately.
+Screenshots
 
-Client (Browser)
-   |
-[HTTP Request]
-   |
-[ Tomcat Server ]
-   ├── Web Container (Servlet Engine)
-   ├── JSP Compiler
-   └── Connectors (HTTP/HTTPS, AJP)
-   |
-[Servlet or JSP Response]
-   |
-Client (Browser).
+License
+
+🚀 Features
+User Authentication: Secure registration and login functionalities using Spring Security.
+
+Expense & Income Management: Add, edit, delete, and view transactions with ease.
+
+Categorization: Organize transactions into customizable categories.
+
+Reporting: Generate reports to analyze spending habits over time.
+
+Responsive UI: Seamless user experience across devices.
+
+
+
+🛠 Tech Stack
+Backend: Java 17, Spring Boot, Spring Data JPA, Spring Security
+
+Frontend: Thymeleaf, Bootstrap 5
+
+Database: MySQL / H2 (for development)
+
+Build Tool: Maven
+
+
+🏁 Getting Started
+Prerequisites
+Java 17 or higher
+
+Intellij IDEA
+
+Maven 3.6+
+
+MySQL Server (if not using H2)
+
+Git
+
+Installation
+Clone the repository:
+
+bash
+Copy code
+git clone https://github.com/yourusername/expense-tracker.git
+cd expense-tracker
+Configure the database:
+
+
+
+properties
+Copy code
+spring.datasource.url=jdbc:h2:mem:testdb
+spring.datasource.username=your_username
+spring.datasource.password=your_password
+spring.jpa.hibernate.ddl-auto=update
+For H2 (in-memory database):
+
+No additional setup required. The application is pre-configured to use H2 for development purposes.
+
+Build and run the application:
+
+bash
+Copy code
+mvn clean install
+mvn spring-boot:run
+Access the application:
+
+Web Interface: http://localhost:8080
+
+Swagger API Docs: http://localhost:8080/swagger-ui.html
+
+📡 API Endpoints
+The application exposes the following RESTful endpoints:
+
+
+Transactions
+GET /api/transactions - Retrieve all transactions
+
+GET /api/transactions/{id} - Retrieve a specific transaction
+
+POST /api/transactions - Create a new transaction
+
+PUT /api/transactions/{id} - Update an existing transaction
+
+DELETE /api/transactions/{id} - Delete a transaction
+
+Categories
+GET /api/categories - Retrieve all categories
+
+POST /api/categories - Create a new category
+
+PUT /api/categories/{id} - Update an existing category
+
+DELETE /api/categories/{id} - Delete a category
+
+Note: All endpoints (except authentication) require a valid JWT token in the Authorization header.
+
+📸 Screenshots
+
+![Screenshot 2025-05-25 152804](https://github.com/user-attachments/assets/8552419a-676c-44e5-8b50-606ef79c36ca)
+
+![Screenshot 2025-05-25 152929](https://github.com/user-attachments/assets/af625342-39cc-4b60-9309-67a12eb771ac)
+
+![Screenshot 2025-05-25 154026](https://github.com/user-attachments/assets/395e6d5a-3ae7-4ad0-ae46-0a45905c6ef9)
+
+![Screenshot 2025-05-25 154150](https://github.com/user-attachments/assets/f395cf1b-42c4-44f4-8b62-f6e42de096aa)
+
+![Screenshot 2025-05-25 154243](https://github.com/user-attachments/assets/0b01b67e-5a63-452b-95ac-89ac7677c6f3)
+
+
+📄 License
+This project is licensed under the MIT License.
+
+
+
+
+
+
+
 
