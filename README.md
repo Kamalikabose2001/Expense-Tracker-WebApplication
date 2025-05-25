@@ -51,7 +51,7 @@ Clone the repository:
 
 bash
 Copy code
-git clone https://github.com/yourusername/expense-tracker.git
+git clone https://github.com/Kamalikabose2001/Expense-Tracker-WebApplication.git
 cd expense-tracker
 Configure the database:
 
@@ -76,12 +76,6 @@ mvn spring-boot:run
 Access the application:
 
 Web Interface: http://localhost:8080
-
-Swagger API Docs: http://localhost:8080/swagger-ui.html
-
-📡 API Endpoints
-The application exposes the following RESTful endpoints:
-
 
 Transactions
 GET /api/transactions - Retrieve all transactions
